@@ -1,9 +1,10 @@
 import './getMenu.js'
 import './setMenu.js'
 
+console.log(brie)
 export function Menu() {
   this.parmigiano = ['Parmigiano', '$', 5, 'Sharper than your grandads straight razor!', 0, {total: 0}];
-  this.whiteCheddar = ['White Cheddar', '$', 3, 'A robust classic', 0, {total: 0}];
+  this.paggiaro = ['paggiaro', '$', 3, 'A robust classic', 0, {total: 0}];
   this.brie = ['Brie', '$', 2, 'A soft farmhouse Cheese. Carful its addicting.', 0, {total: 0}];
   this.onion = ['Onion', '$', 1, 'A gift from earth', 0, {total: 0}];
   this.olive = ['Olive', '$', 1, 'Pungent.. nuff said', 0, {total: 0}];

@@ -10,8 +10,8 @@ const threeMax = (objKey, thisArg) => {
 Menu.prototype.setParmigiano = function() {
   threeMax(this.parmigiano, this)
 }
-Menu.prototype.setWhiteCheddar = function() {
-  threeMax(this.whiteCheddar, this)
+Menu.prototype.setPaggiaro = function() {
+  threeMax(this.paggiaro, this)
 }
 Menu.prototype.setBrie = function() {
   threeMax(this.brie, this)
