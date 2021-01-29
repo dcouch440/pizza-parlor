@@ -24,27 +24,31 @@ Expect: new Menu().toEqual(Menu {parmigiano: Array(5), whiteCheddar: Array(5), 
 
 Describe: Menu.prototype.setParmigiano()
 Test: 'It will add parmigiano to the total price until 3 total items are added. Cost 5'
-Expect: menu.setParmigiano().toEqual({totalCost: 15})
+Expect: menu.setParmigiano().toEqual(Menu {totalCost: 15})
 
 Describe: Menu.prototype.setWhiteCheddar()
 Test: 'It will add white cheddar to the total price until 3 total items are added. Cost 3'
-Expect: menu.setWhiteCheddar().toEqual({totalCost: 9})
+Expect: menu.setWhiteCheddar().toEqual(Menu {totalCost: 9})
 
 Describe: Menu.prototype.setBrie()
 Test: 'It will add brie to the total price until 3 total items are added. Cost 2'
-Expect: menu.setBrie().toEqual({totalCost: 6})
+Expect: menu.setBrie().toEqual(Menu {totalCost: 6})
 
 Describe: Menu.prototype.setOnionPrice()
 Test: 'It will add onion to the total price until 3 total items are added. Cost 1'
-Expect: menu.setOnionPrice().toEqual({totalCost: 3})
+Expect: menu.setOnionPrice().toEqual(Menu {totalCost: 3})
 
 Describe: Menu.prototype.setOlivePrice()
 Test: 'It will add olive to the total price until 3 total items are added. Cost 1'
-Expect: menu.setOlivePrice().toEqual({totalCost: 3})
+Expect: menu.setOlivePrice().toEqual(Menu {totalCost: 3})
 
 Describe: Menu.prototype.setTomatoPrice()
 Test: 'It will add tomato to the total price until 3 total items are added. Cost 1'
-Expect: menu.setTomatoPrice().toEqual({totalCost: 3})
+Expect: menu.setTomatoPrice().toEqual(Menu {totalCost: 3})
+
+Describe: Menu.prototype.setMushroomPrice()
+Test: 'It will add mushroom to the total price until 3 total items are added. Cost 1'
+Expect: menu.setMushroomPrice().toEqual(Menu {totalCost: 3})
 
 
 
