@@ -23,12 +23,12 @@ Test: 'It will create an object to hold all the pizza toppings and other options
 Expect: new Menu().toEqual(Menu {parmigiano: Array(5), whiteCheddar: Array(5), brie: Array(5), onion: Array(5), olive: Array(5), …})
 
 Describe: Menu.prototype.setParmigiano()
-Test: 'It will add parmigiano to the total price until 3 totals'
-Expect: menu.setParmigiano().toEqual({totalCost: 5})
+Test: 'It will add parmigiano to the total price until 3 total items are added. Cost 5'
+Expect: menu.setParmigiano().toEqual({totalCost: 15})
 
 Describe: Menu.prototype.setWhiteCheddar()
-Test: 'It will add parmigiano to the total price'
-Expect: menu.setParmigiano().toEqual({totalCost: 5})
+Test: 'It will add white cheddar to the total price until 3 total items are added. Cost 3'
+Expect: menu.setParmigiano().toEqual({totalCost: 9})
 
 // Describe: Sizes()
 // Test: 'It will create an object to hold all the pizza sizes'
