@@ -30,7 +30,7 @@ Menu.prototype.setMushroomPrice = function() {
 }
 Menu.prototype.setSize = function(size) { 
   size === 'small' ? this.totalCost = this.totalCost + this.small:
-  size === 'medium' ? this.totalCost = this.totalCost + this.small:
+  size === 'medium' ? this.totalCost = this.totalCost + this.medium:
   size === 'large' ? this.totalCost = this.totalCost + this.large: 
   null
 }

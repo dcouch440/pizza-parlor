@@ -50,6 +50,12 @@ Describe: Menu.prototype.setMushroomPrice()
 Test: 'It will add mushroom to the total price until 3 total items are added. Cost 1'
 Expect: menu.setMushroomPrice().toEqual(Menu {totalCost: 3})
 
+Describe: Menu.prototype.setSize()
+Test: 'It will set the size for a small pizza to the total cost'
+Expect: menu.setSize('small').toEqual(Menu {totalCost: 2})
+
+Test: 'It will set the size for a medium pizza to the total cost'
+Expect: menu.setSize('medium').toEqual(Menu {totalCost: 2})
 
 
 ```
