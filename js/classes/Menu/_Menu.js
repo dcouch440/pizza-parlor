@@ -1,7 +1,6 @@
 import './getMenu.js'
 import './setMenu.js'
 
-console.log(brie)
 export function Menu() {
   this.parmigiano = ['Parmigiano', '$', 5, 'Sharper than your grandads straight razor!', 0, {total: 0}];
   this.paggiaro = ['paggiaro', '$', 3, 'A robust classic', 0, {total: 0}];
