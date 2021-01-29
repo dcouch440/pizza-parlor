@@ -6,10 +6,18 @@ const threeMax = (objKey, thisArg) => {
     thisArg.totalCost = thisArg.totalCost + objKey[2]
   }
 }
+Menu.prototype.setParmigiano = function() {
+  threeMax(this.parmigiano, this)
+}
+Menu.prototype.setWhiteCheddar = function() {
+  threeMax(this.parmigiano, this)
+}
+Menu.prototype.brie = function() {
+  threeMax(this.brie, this)
+}
 Menu.prototype.setOnionPrice = function() {
   threeMax(this.onion, this)
 }
-
 Menu.prototype.setOlivePrice = function() {
   threeMax(this.olive, this)
 }
@@ -18,4 +26,10 @@ Menu.prototype.setTomatoPrice = function() {
 }
 Menu.prototype.setMushroomPrice = function() {
   threeMax(this.mushroom, this)
+}
+Menu.prototype.setSize = function(size) { 
+  size === 'small' ? this.totalCost = this.totalCost + this.small:
+  size === 'medium' ? this.totalCost = this.totalCost + this.small:
+  size === 'large' ? this.totalCost = this.totalCost + this.large: 
+  null
 }

@@ -20,11 +20,9 @@ This is a web app made to add items (pizza toppings and crust) to a cart and ret
 ```js
 Describe: Menu()
 Test: 'It will create an object to hold all the pizza toppings and other options'
-Expect: Menu().toEqual({sizes: {}, toppings: {}})
+Expect: new Menu().toEqual(Menu {parmigiano: Array(5), whiteCheddar: Array(5), brie: Array(5), onion: Array(5), olive: Array(5), …})
 
-Describe: Cheeses()
-Test: 'it will return an object with an array of elements used for the html'
-Expect: Cheeses().toEqual({})
+
 
 // Describe: Sizes()
 // Test: 'It will create an object to hold all the pizza sizes'
