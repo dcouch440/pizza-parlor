@@ -57,6 +57,9 @@ Expect: menu.setSize('small').toEqual(Menu {totalCost: 2})
 Test: 'It will set the size for a medium pizza to the total cost'
 Expect: menu.setSize('medium').toEqual(Menu {totalCost: 2})
 
+Test: 'It will set the size for a large pizza to the total cost'
+Expect: menu.setSize('large').toEqual(Menu {totalCost: 5})
+
 
 ```
 

@@ -11,7 +11,7 @@ export function Menu() {
   this.mushroom = ['Aged Mushroom', '$', 2, 'These mushrooms are a journey!', 0, {total: 0}];
   this.small = 2;
   this.medium = 4;
-  this.large - 5;
+  this.large = 5;
   this.totalCost = 0;
 };
 
