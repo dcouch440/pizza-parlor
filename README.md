@@ -34,6 +34,11 @@ Describe: Menu.prototype.setBrie()
 Test: 'It will add white cheddar to the total price until 3 total items are added. Cost 2'
 Expect: menu.setParmigiano().toEqual({totalCost: 6})
 
+Describe: Menu.prototype.setOnionPrice()
+Test: 'It will add white cheddar to the total price until 3 total items are added. Cost 1'
+Expect: menu.setParmigiano().toEqual({totalCost: 3})
+
+
 
 ```
 
