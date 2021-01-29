@@ -1,9 +1,10 @@
-import {Toppings} from './classes/Toppings/_Toppings.js'
+import {Menu} from './classes/Menu/_Menu.js'
 
-let myTop = new Toppings()
-console.log(myTop.getOnionsPrice())
+let myMenu = new Menu()
+myMenu.getOnionPrice()
+myMenu.getOnionPrice()
+myMenu.getOnionPrice()
+myMenu.getOnionPrice()
+console.log(myMenu)
 
-document.addEventListener('DOMContentLoaded', () => {
-  let checkMe = document.getElementById('exist')
-  console.log(checkMe)
-})
+document.addEventListener('DOMContentLoaded', () => {})
