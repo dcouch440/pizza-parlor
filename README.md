@@ -50,15 +50,15 @@ Describe: Menu.prototype.setMushroomPrice()
 Test: 'It will add mushroom to the total price until 3 total items are added. Cost 1'
 Expect: menu.setMushroomPrice().toEqual(Menu {totalCost: 3})
 
-Describe: Menu.prototype.setSize()
+Describe: Menu.prototype.setSizePrice()
 Test: 'It will set the size for a small pizza to the total cost'
-Expect: menu.setSize('small').toEqual(Menu {totalCost: 2})
+Expect: menu.setSizePrice('small').toEqual(Menu {totalCost: 2})
 
 Test: 'It will set the size for a medium pizza to the total cost'
-Expect: menu.setSize('medium').toEqual(Menu {totalCost: 2})
+Expect: menu.setSizePrice('medium').toEqual(Menu {totalCost: 2})
 
 Test: 'It will set the size for a large pizza to the total cost'
-Expect: menu.setSize('large').toEqual(Menu {totalCost: 5})
+Expect: menu.setSizePrice('large').toEqual(Menu {totalCost: 5})
 
 Describe: threeMax()
 Test: 'It will take the current object values and object to change total cost up to three'

@@ -9,6 +9,7 @@ export function Menu() {
   this.olive = ['Olive', '$', 1, 'Pungent.. nuff said', 0, {total: 0}, 'olive-button'];
   this.tomato = ['Tomato', '$', 1, 'Slightly sweet, never sour', 0, {total: 0}, 'tomato-button'];
   this.mushroom = ['Aged Mushroom', '$', 2, 'These mushrooms are a journey!', 0, {total: 0}, 'mushroom-button'];
+  this.size = 'medium'
   this.small = 2;
   this.medium = 4;
   this.large = 5;

@@ -9,6 +9,11 @@ const menuComponent = (obj) => {
     </div>
   `
 }
+const displayTotal = (obj) => {
+  return`
+    <div id="total">Total Cost With Us Today: $${obj.displayCurrentPrice()}</div>
+  `
+}
 const eventLogger = (event, thisArg) => {
   const eventTarget = event.target.id
   switch (eventTarget) {
@@ -19,23 +24,34 @@ const eventLogger = (event, thisArg) => {
       thisArg.setPaggiaroPrice();
       break;
     case ('brie-button'):
-      thisArg.setBriePrice()
+      thisArg.setBriePrice();
       break;
     case ('onion-button'):
-      thisArg.setOnionPrice()
+      thisArg.setOnionPrice();
     case ('olive-button'):
-      thisArg.setOlivePrice()
+      thisArg.setOlivePrice();
       break;
     case ('tomato-button'):
-      thisArg.setTomatoPrice()
+      thisArg.setTomatoPrice();
       break;
     case ('mushroom-button'):
-      thisArg.setMushroomPrice()
+      thisArg.setMushroomPrice();
       break;
+    case ('small'):
+      thisArg.setSize('small');
+      break;
+    case ('medium'):
+      thisArg.setSize('medium');
+    break;
+    case ('large'):
+      thisArg.setSize('large');
+    break;
+    case('submit'):
+      thisArg.setSizePrice();
   }
 }
 document.addEventListener('DOMContentLoaded', () => {
-  let menu = new Menu()
+  let menu = new Menu();
   const myMenuItems = [
     menu.parmigiano, 
     menu.paggiaro,
@@ -44,13 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.olive,
     menu.tomato,
     menu.mushroom
-  ]
-  const menuSelector = document.getElementById('menu-selector') 
+  ];
+  const menuSelector = document.getElementById('menu-selector-root');
+  const totalCost = document.getElementById('total-root');
+  totalCost.innerHTML = displayTotal(menu);
   const menuMapper = myMenuItems.map(item => {
     return menuComponent(item)
   }).join('')
   menuSelector.innerHTML = menuMapper
   document.getElementById('pizza-shop').addEventListener('click', event => {
-    eventLogger(event, menu)
-  })
-})
+    eventLogger(event, menu);
+    totalCost.innerHTML = displayTotal(menu);
+  });
+});
