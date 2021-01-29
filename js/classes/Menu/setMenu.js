@@ -3,6 +3,7 @@ import {Menu} from './_Menu.js'
 const threeMax = (objKey, thisArg) => {
   objKey[4] += 1
   if (objKey[4] < 4){ 
+    objKey[5].total += 1
     thisArg.totalCost = thisArg.totalCost + objKey[2]
   }
 }
