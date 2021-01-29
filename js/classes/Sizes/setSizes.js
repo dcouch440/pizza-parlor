@@ -1,1 +1,1 @@
-import {Sizes} from './Sizes.js'
+import {Sizes} from './_Sizes.js'

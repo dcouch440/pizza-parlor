@@ -1,11 +1,8 @@
-# {Project Name}
-#### *Co-Created By:*
-#### *Co-Created By:*
-#### *{Brief Project Description}*
+# `Pizza Parlor`
+#### Author: David Couch
+#### *This is a web app for a pizza parlor*
+
 <!-- Check list
-- Project Name
-- Author
-- Brief Description
 - Description
 - Specs
 - Link in gh-pages
@@ -16,21 +13,28 @@
 * * *
 
 ## Description  
-{project description}
+This is a web app made to add items (pizza toppings and crust) to a cart and return the total cost. This web app is made using JavaScrip prototypes.
 
 * * *
 ## Specs
+```js
+Describe: Menu()
+Test: 'It will create an object to hold all the pizza toppings and other options'
+Expect: Menu().toEqual({sizes: {}, toppings: {}})
 
+Describe: Sizes()
+Test: 'It will create an object to hold all the pizza sizes'
+Expect: Sizes().toEqual({large: 5, medium: 4, small: 3})
+
+
+```
 
 * * *
-
 ## Technologies used
 * HTML
 * CSS
 * Git and Github
 * JavaScript
-* JQuery
-
 * * *
 
 

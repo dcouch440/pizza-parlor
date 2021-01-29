@@ -1,9 +1,8 @@
 import './getSizes'
 import './setSizes'
 
-function Menu() {
-  this.sizes = {};
-  this.toppings = {};
-  this.crust = {};
-  this.cheese = {};
+export function Sizes() {
+  this.large = 5;
+  this.medium = 3;
+  this.small = 3;
 }

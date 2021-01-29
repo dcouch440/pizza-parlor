@@ -1,7 +1,7 @@
 import './getMenu'
 import './setMenu'
 
-function Menu() {
+export function Menu() {
   this.sizes = {};
   this.toppings = {};
   this.crust = {};
