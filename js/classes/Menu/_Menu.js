@@ -1,4 +1,3 @@
-import './getMenu.js'
 import './setMenu.js'
 
 export function Menu() {
