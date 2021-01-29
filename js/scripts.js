@@ -1,7 +1,11 @@
 import {Menu} from './classes/Menu/_Menu.js'
 
-let myMenu = new Menu()
-myMenu.setSize('small')
-console.log(myMenu)
+let menu = new Menu()
+menu.setParmigiano()
+menu.setParmigiano()
+menu.setParmigiano()
+menu.setParmigiano()
+menu.setParmigiano()
+console.log(menu)
 
 document.addEventListener('DOMContentLoaded', () => {})

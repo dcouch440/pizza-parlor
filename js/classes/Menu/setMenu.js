@@ -10,7 +10,7 @@ Menu.prototype.setParmigiano = function() {
   threeMax(this.parmigiano, this)
 }
 Menu.prototype.setWhiteCheddar = function() {
-  threeMax(this.parmigiano, this)
+  threeMax(this.whiteCheddar, this)
 }
 Menu.prototype.brie = function() {
   threeMax(this.brie, this)
