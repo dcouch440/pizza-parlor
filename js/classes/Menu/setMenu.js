@@ -7,13 +7,13 @@ const threeMax = (objKey, thisArg) => {
     thisArg.totalCost = thisArg.totalCost + objKey[2]
   }
 }
-Menu.prototype.setParmigiano = function() {
+Menu.prototype.setParmigianoPrice = function() {
   threeMax(this.parmigiano, this)
 }
-Menu.prototype.setPaggiaro = function() {
+Menu.prototype.setPaggiaroPrice = function() {
   threeMax(this.paggiaro, this)
 }
-Menu.prototype.setBrie = function() {
+Menu.prototype.setBriePrice = function() {
   threeMax(this.brie, this)
 }
 Menu.prototype.setOnionPrice = function() {

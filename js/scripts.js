@@ -26,4 +26,31 @@ document.addEventListener('DOMContentLoaded', () => {
     return menuComponent(item)
   }).join('')
   menuSelector.innerHTML = menuMapper
+  document.getElementById('pizza-shop').addEventListener('click', event => {
+    const eventTarget = event.target.id
+    console.log(eventTarget)
+    switch (eventTarget) {
+      case ('parmigiano-button'):
+        menu.setParmigianoPrice();
+        break;
+      case ('paggiaro-button'):
+        menu.setPaggiaroPrice();
+        break;
+      case ('brie-button'):
+        menu.setBriePrice()
+        break;
+      case ('onion-button'):
+        menu.setOnionPrice()
+      case ('olive-button'):
+        menu.setOlivePrice()
+        break;
+      case ('tomato-button'):
+        menu.setTomatoPrice()
+        break;
+      case ('mushroom-button'):
+        menu.setMushroomPrice()
+        break;
+    }
+    console.log(menu)
+  })
 })

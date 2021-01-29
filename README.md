@@ -22,17 +22,17 @@ Describe: Menu()
 Test: 'It will create an object to hold all the pizza toppings and other options'
 Expect: new Menu().toEqual(Menu {parmigiano: Array(5), whiteCheddar: Array(5), brie: Array(5), onion: Array(5), olive: Array(5), …})
 
-Describe: Menu.prototype.setParmigiano()
+Describe: Menu.prototype.setParmigianoPrice()
 Test: 'It will add parmigiano to the total price until 3 total items are added. Cost 5'
-Expect: menu.setParmigiano().toEqual(Menu {totalCost: 15})
+Expect: menu.setParmigianoPrice().toEqual(Menu {totalCost: 15})
 
-Describe: Menu.prototype.setPaggiaro()
+Describe: Menu.prototype.setPaggiaroPrice()
 Test: 'It will add paggiaro to the total price until 3 total items are added. Cost 3'
-Expect: menu.setPaggiaro().toEqual(Menu {totalCost: 9})
+Expect: menu.setPaggiaroPrice().toEqual(Menu {totalCost: 9})
 
-Describe: Menu.prototype.setBrie()
+Describe: Menu.prototype.setBriePrice()
 Test: 'It will add brie to the total price until 3 total items are added. Cost 2'
-Expect: menu.setBrie().toEqual(Menu {totalCost: 6})
+Expect: menu.setBriePrice().toEqual(Menu {totalCost: 6})
 
 Describe: Menu.prototype.setOnionPrice()
 Test: 'It will add onion to the total price until 3 total items are added. Cost 1'
