@@ -39,8 +39,12 @@ Test: 'It will add onion to the total price until 3 total items are added. Cost 
 Expect: menu.setOnionPrice().toEqual({totalCost: 3})
 
 Describe: Menu.prototype.setOlivePrice()
-Test: 'It will add white cheddar to the total price until 3 total items are added. Cost 1'
+Test: 'It will add olive to the total price until 3 total items are added. Cost 1'
 Expect: menu.setOlivePrice().toEqual({totalCost: 3})
+
+Describe: Menu.prototype.setTomatoPrice()
+Test: 'It will add tomato to the total price until 3 total items are added. Cost 1'
+Expect: menu.setTomatoPrice().toEqual({totalCost: 3})
 
 
 
