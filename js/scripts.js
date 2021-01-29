@@ -9,7 +9,31 @@ const menuComponent = (obj) => {
     </div>
   `
 }
-
+const eventLogger = (event, thisArg) => {
+  const eventTarget = event.target.id
+  switch (eventTarget) {
+    case ('parmigiano-button'):
+      thisArg.setParmigianoPrice();
+      break;
+    case ('paggiaro-button'):
+      thisArg.setPaggiaroPrice();
+      break;
+    case ('brie-button'):
+      thisArg.setBriePrice()
+      break;
+    case ('onion-button'):
+      thisArg.setOnionPrice()
+    case ('olive-button'):
+      thisArg.setOlivePrice()
+      break;
+    case ('tomato-button'):
+      thisArg.setTomatoPrice()
+      break;
+    case ('mushroom-button'):
+      thisArg.setMushroomPrice()
+      break;
+  }
+}
 document.addEventListener('DOMContentLoaded', () => {
   let menu = new Menu()
   const myMenuItems = [
@@ -27,30 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }).join('')
   menuSelector.innerHTML = menuMapper
   document.getElementById('pizza-shop').addEventListener('click', event => {
-    const eventTarget = event.target.id
-    console.log(eventTarget)
-    switch (eventTarget) {
-      case ('parmigiano-button'):
-        menu.setParmigianoPrice();
-        break;
-      case ('paggiaro-button'):
-        menu.setPaggiaroPrice();
-        break;
-      case ('brie-button'):
-        menu.setBriePrice()
-        break;
-      case ('onion-button'):
-        menu.setOnionPrice()
-      case ('olive-button'):
-        menu.setOlivePrice()
-        break;
-      case ('tomato-button'):
-        menu.setTomatoPrice()
-        break;
-      case ('mushroom-button'):
-        menu.setMushroomPrice()
-        break;
-    }
-    console.log(menu)
+    eventLogger(event, menu)
   })
 })
