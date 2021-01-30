@@ -12,33 +12,37 @@ export function Menu() {
   this.large = 5;
   this.totalCost = 0;
 };
-const threeMax = (objKey, thisArg) => {
+const updateNodes = (currentNode, objKey) => {
+  currentNode.innerHTML = objKey[5].total
+}
+const threeMax = (objKey, thisArg, currentNode) => {
   objKey[4] += 1;
   if (objKey[4] < 4){ 
     objKey[5].total += 1;
     thisArg.totalCost = thisArg.totalCost + objKey[2];
   };
+  updateNodes(currentNode, objKey);
 };
-Menu.prototype.setParmigianoPrice = function() {
-  threeMax(this.parmigiano, this);
+Menu.prototype.setParmigianoPrice = function(currentNode) {
+  threeMax(this.parmigiano, this, currentNode);
 };
-Menu.prototype.setPaggiaroPrice = function() {
-  threeMax(this.paggiaro, this);
+Menu.prototype.setPaggiaroPrice = function(currentNode) {
+  threeMax(this.paggiaro, this, currentNode);
 };
-Menu.prototype.setBriePrice = function() {
-  threeMax(this.brie, this);
+Menu.prototype.setBriePrice = function(currentNode) {
+  threeMax(this.brie, this, currentNode);
 };
-Menu.prototype.setOnionPrice = function() {
-  threeMax(this.onion, this);
+Menu.prototype.setOnionPrice = function(currentNode) {
+  threeMax(this.onion, this, currentNode);
 };
-Menu.prototype.setOlivePrice = function() {
-  threeMax(this.olive, this);
+Menu.prototype.setOlivePrice = function(currentNode) {
+  threeMax(this.olive, this, currentNode);
 };
-Menu.prototype.setTomatoPrice = function() {
-  threeMax(this.tomato, this);
+Menu.prototype.setTomatoPrice = function(currentNode) {
+  threeMax(this.tomato, this, currentNode);
 };
-Menu.prototype.setMushroomPrice = function() {
-  threeMax(this.mushroom, this);
+Menu.prototype.setMushroomPrice = function(currentNode) {
+  threeMax(this.mushroom, this, currentNode);
 };
 Menu.prototype.setSize = function(size) {
   this.size = size

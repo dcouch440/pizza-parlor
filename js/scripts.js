@@ -1,11 +1,12 @@
 import {Menu} from './classes/Menu.js'
 
-const menuComponent = (obj) => {
+const menuComponent = (obj, i) => {
   return `
     <div id="menuComponent">
       <div id="menu-name">
-      <p>${obj[0]} ${obj[1]}${obj[2]}</p>
-      <button id="${obj[6]}">Add ${obj[0]}</button>
+        <p>${obj[0]} ${obj[1]}${obj[2]}</p>
+        <button id="${obj[6]}">Add ${obj[0]}</button>
+        <p key={${i}} id="items">${obj[5].total}</p>
       </div>
       <div id="menu-description">${obj[3]}</div>  
     </div>
@@ -16,28 +17,29 @@ const displayTotal = (obj) => {
     <div id="total">Total Cost With Us Today: $${obj.displayCurrentPrice()}</div>
   `
 }
-const eventLogger = (event, thisArg) => {
+const eventLogger = (event, thisArg, nodeList) => {
   const eventTarget = event.target.id
   switch (eventTarget) {
     case ('parmigiano-button'):
-      thisArg.setParmigianoPrice();
+      thisArg.setParmigianoPrice(nodeList[0]);
       break;
     case ('paggiaro-button'):
-      thisArg.setPaggiaroPrice();
+      thisArg.setPaggiaroPrice(nodeList[1]);
       break;
     case ('brie-button'):
-      thisArg.setBriePrice();
+      thisArg.setBriePrice(nodeList[2]);
       break;
     case ('onion-button'):
-      thisArg.setOnionPrice();
+      thisArg.setOnionPrice(nodeList[3]);
+      break;
     case ('olive-button'):
-      thisArg.setOlivePrice();
+      thisArg.setOlivePrice(nodeList[4]);
       break;
     case ('tomato-button'):
-      thisArg.setTomatoPrice();
+      thisArg.setTomatoPrice(nodeList[5]);
       break;
     case ('mushroom-button'):
-      thisArg.setMushroomPrice();
+      thisArg.setMushroomPrice(nodeList[6]);
       break;
     case ('small'):
       thisArg.setSize('small');
@@ -54,6 +56,8 @@ const eventLogger = (event, thisArg) => {
   }
 }
 document.addEventListener('DOMContentLoaded', () => {
+  const menuSelector = document.getElementById('menu-selector-root');
+  const totalCost = document.getElementById('total-root');
   let menu = new Menu();
   const myMenuItems = [
     menu.parmigiano, 
@@ -64,15 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.tomato,
     menu.mushroom
   ];
-  const menuSelector = document.getElementById('menu-selector-root');
-  const totalCost = document.getElementById('total-root');
   totalCost.innerHTML = displayTotal(menu);
-  const menuMapper = myMenuItems.map(item => {
-    return menuComponent(item)
+  const menuMapper = myMenuItems.map(
+    (item, index) => {
+      return menuComponent(item, index)
   }).join('');
   menuSelector.innerHTML = menuMapper
+  const myTotals = document.querySelectorAll('#items');
   document.getElementById('pizza-shop').addEventListener('click', event => {
-    eventLogger(event, menu);
+    eventLogger(event, menu, myTotals);
+    event.stopPropagation()
     totalCost.innerHTML = displayTotal(menu);
   });
 });

@@ -105,6 +105,15 @@ h1 {
   box-shadow: 0 0 2px 2px black;
   border-radius: 2px;
 }
+#items {
+  font-size: 26px;
+  color: rgb(0, 0, 0);
+  text-shadow: 
+    1px 1px 5px rgb(161, 161, 161), 
+    1px -1px 1px rgb(82, 82, 82), 
+    -1px 1px 1px rgb(140, 140, 140), 
+    -1px -1px 1px rgb(255, 255, 255);
+}
 @media only screen and (max-width: 1000px){
   #pizza-shop {
     flex-direction: column-reverse;
