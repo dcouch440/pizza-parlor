@@ -1,6 +1,6 @@
 export function Menu() {
   this.parmigiano = ['Parmigiano', '$', 5, 'Sharper than your grandads straight razor!', 0, {total: 0}, 'parmigiano-button'];
-  this.paggiaro = ['paggiaro', '$', 3, 'A robust classic.', 0, {total: 0}, 'paggiaro-button'];
+  this.paggiaro = ['Paggiaro', '$', 3, 'A robust classic.', 0, {total: 0}, 'paggiaro-button'];
   this.brie = ['Brie', '$', 2, 'A soft farmhouse Cheese. Carful its addicting.', 0, {total: 0}, 'brie-button'];
   this.onion = ['Onion', '$', 1, 'A gift from earth.', 0, {total: 0}, 'onion-button'];
   this.olive = ['Olive', '$', 1, 'Pungent.. nuff said.', 0, {total: 0}, 'olive-button'];
