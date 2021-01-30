@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.tomato,
     menu.mushroom
   ];
-  totalCost.forEach(node => {node.innerHTML = displayTotal(menu)});
+  totalCost.forEach(node => node.innerHTML = displayTotal(menu));
   const menuMapper = myMenuItems.map(
     (item, index) => {
       return menuComponent(item, index)
@@ -78,6 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const toppingTotals = document.querySelectorAll('#items');
   document.getElementById('pizza-shop').addEventListener('click', event => {
     eventLogger(event, menu, toppingTotals, totalModal);
-    totalCost.forEach(node => {node.innerHTML = displayTotal(menu)});
+    totalCost.forEach(node => node.innerHTML = displayTotal(menu));
   });
 });
