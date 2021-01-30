@@ -2,10 +2,6 @@
 #### Author: David Couch
 #### *This is a web app for a pizza parlor*
 
-<!-- Check list
-- Specs
-- Link in gh-pages
- -->
 * * *
 
 ## Description  
@@ -80,7 +76,7 @@ Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion
 
 ## Installation : 
 ### Want to see this webpage now?
-###### See this web page in action on [Github Pages]( )
+###### See this web page in action on [Github Pages]( https://dcouch440.github.io/pizza-parlor/ )
 
 * Go to ( https://github.com/dcouch440/pizza-parlor.git ).
 
