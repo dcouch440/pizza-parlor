@@ -16,7 +16,7 @@ This is a web app made to add items (pizza toppings and crust) to a cart and ret
 ```js
 Describe: Menu()
 Test: 'It will create an object to hold all the pizza toppings and other options'
-Expect: new Menu().toEqual(Menu {parmigiano: Array(5), whiteCheddar: Array(5), brie: Array(5), onion: Array(5), olive: Array(5), …})
+Expect: new Menu().toEqual(Menu {parmigiano: Array(5), paggiaro: Array(5), brie: Array(5), onion: Array(5), olive: Array(5), …})
 
 Describe: Menu.prototype.setParmigianoPrice()
 Test: 'It will add parmigiano to the total price until 3 total items are added. Cost 5'
@@ -59,7 +59,6 @@ Expect: menu.setSizePrice('large').toEqual(Menu {totalCost: 5})
 Describe: Menu.prototype.displayCurrentPrice()
 Test: 'It will get the current price and add it to the selected size'
 Expect: menu.displayCurrentPrice().toEqual(4)
-
 
 Describe: threeMax()
 Test: 'It will take the current object values and object to change total cost up to three'
