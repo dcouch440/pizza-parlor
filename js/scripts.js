@@ -2,13 +2,17 @@ import {Menu} from './classes/Menu.js'
 
 const menuComponent = (obj, i) => {
   return `
-    <div id="menuComponent">
-      <div id="menu-name">
-        <p>${obj[0]} ${obj[1]}${obj[2]}</p>
-        <button id="${obj[6]}">Add ${obj[0]}</button>
-        <p key={${i}} id="items">${obj[5].total}</p>
+    <div class="menu-component">
+      <div class="menu-name">
+        <p class="title">${obj[0]} ${obj[1]}${obj[2]}</p>
+        <div class="menu-description">${obj[3]}</div>
+        <div class="button-container">
+          <button id="${obj[6]}">Add ${obj[0]}</button>
+        </div>
+        <div class="item-totals">
+          <p key={${i}} class="items">${obj[5].total}</p>
+        </div>
       </div>
-      <div id="menu-description">${obj[3]}</div>  
     </div>
   `
 }
@@ -75,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return menuComponent(item, index)
   }).join('');
   menuSelector.innerHTML = menuMapper
-  const toppingTotals = document.querySelectorAll('#items');
+  const toppingTotals = document.querySelectorAll('.items');
   document.getElementById('pizza-shop').addEventListener('click', event => {
     eventLogger(event, menu, toppingTotals, totalModal);
     totalCost.forEach(node => node.innerHTML = displayTotal(menu));

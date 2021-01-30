@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -46,10 +47,39 @@ h1 {
 #pizza-options-menu {
   background-color: antiquewhite;
   border: 2px solid black;
-  box-shadow: 0px 1px 2px 2px black;
+  box-shadow:0px 1px 2px 2px black, inset -60px 19px 130px 2px #c3c3c3a2, inset -2px -16px 130px 2px #b5b5b524;
   padding: 10px;
   width: 48%;
   border-radius: 5px;
+}
+.menu-description {
+  width: 70%;
+  border-radius: 0px 5px 5px 5px;
+  text-align: center;
+  box-shadow: inset 1px 1px 5px black;
+  color: black;
+  text-shadow: 0px 0px 1px black;
+  background-color: blanchedalmond;
+  border: 1px solid rgba(0, 0, 0, 0.493);
+  font-weight: 800;
+  font-size: 18px;
+  font-family: 'Cedarville Cursive', cursive;
+}
+.title {
+  background-color: black;
+  color: white;
+  width: 25%;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid #000000;
+  box-shadow: 
+    inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 
+    0px 4px 9px 1px #0000007a, 
+    0px 1px 2px 0px black,
+    0px 6px 3px black;
+  border-radius: 10px 10px 0px 0px;
+  padding: 5px;
+  text-shadow: -1px -2px 2px black, 1px 1px 1px white, -1px 2px 1px black;
 }
 #pizza-shop button {
   background-color: #Fe7A15;
@@ -86,8 +116,11 @@ h1 {
 #description-title {
   text-align: center;
 }
-#menu-name p {
+.menu-name p {
   margin: 0;
+}
+.button-container {
+  padding-top: 5px;
 }
 #img-container {
   padding: 30px;
@@ -104,7 +137,7 @@ h1 {
   box-shadow: 0 0 2px 2px black;
   border-radius: 2px;
 }
-#items {
+.items {
   font-size: 26px;
   color: rgb(0, 0, 0);
   text-shadow: 
