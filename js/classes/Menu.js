@@ -15,7 +15,7 @@ export function Menu() {
 const updateNodes = (currentNode, objKey) => {
   console.log(currentNode, objKey)
   currentNode.innerHTML = objKey[5].total
-}
+};
 const threeMax = (objKey, thisArg, currentNode) => {
   objKey[4] += 1;
   if (objKey[4] < 4){ 
