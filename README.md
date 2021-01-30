@@ -108,7 +108,8 @@ Expect: eventLogger(
 ![Code button](/img/README/code.PNG)
 
 * Click on the code button to open the menu.\
-![Github Repo Example](/img/README/HTTPS.PNG)
+
+![Github Repo Example](/img/README/HTTPS.png)
 
 - Copy the HTTPS code by clicking the clipboard next to the link.
 
