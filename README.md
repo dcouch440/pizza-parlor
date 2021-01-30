@@ -63,6 +63,9 @@ Expect: threeMax(this.onion, this).toEqual(Menu{totalCost: 1, onion: {[1, {total
 Test: 'It will be used inside methods to increase values but will not exceed 3'
 Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion: {[4, {total: 3}]}) 
 
+Describe: eventLogger()
+Test: 'It will take in four arguments, the current event being fired, object to be called on, nodes to be passed through, and a modal node to show for user total'
+Expect: eventLogger(MouseEvent {isTrusted: true,...}, Menu {parmigiano: Array(5),...}, NodeList(7) [p#items,...], <div id="total-popup">...</div> ).toEqual('This should use the id of the nodes event target name to decide which action to take. this function is responsible for all interactions with the Menu object. Please see corresponding methods for each case to see what actions are being taken. The node list is in corresponding order to know which total to update.')
 ```
 
 * * *
