@@ -114,7 +114,7 @@ Expect: eventLogger(
 *  Navigate to the code button on the github website.\
 ![Code button](/img/README/code.PNG)
 
-* Click on the code button to open the menu.\
+* Click on the code button to open the menu.
 
 ![Github Repo Example](/img/README/HTTPS.png)
 
