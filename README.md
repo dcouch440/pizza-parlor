@@ -1,4 +1,4 @@
-# `Pizza Parlor`
+# `Pizza Parlor 🍕`
 #### Author: David Couch
 #### *This is a web app for a pizza parlor*
 
