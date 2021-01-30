@@ -13,7 +13,6 @@ export function Menu() {
   this.totalCost = 0;
 };
 const updateNodes = (currentNode, objKey) => {
-  console.log(currentNode, objKey)
   currentNode.innerHTML = objKey[5].total
 };
 const threeMax = (objKey, thisArg, currentNode) => {

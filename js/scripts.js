@@ -18,7 +18,6 @@ const displayTotal = (obj) => {
   `
 }
 const eventLogger = (event, thisArg, nodeList, totalModal) => {
-  console.log(totalModal)
   const eventTarget = event.target.id
   switch (eventTarget) {
     case ('parmigiano-button'):

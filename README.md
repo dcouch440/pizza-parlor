@@ -5,7 +5,7 @@
 * * *
 
 ## Description  
-This is a web app made to add items (pizza toppings and crust) to a cart and return the total cost. This web app is made using JavaScript prototypes to create methods to change information in objects.
+This is a web app made to add items (pizza toppings) to a cart and return the total cost. This web app is made using JavaScript prototypes to create methods to change information in objects.
 
 * * *
 ## Specs
