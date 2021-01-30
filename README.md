@@ -75,7 +75,11 @@ Expect: updateNodes(
 
 Describe: eventLogger()
 Test: 'It will take in four arguments, the current event being fired, object to be called on, nodes to be passed through, and a modal node to show for user total'
-Expect: eventLogger(MouseEvent {isTrusted: true,...}, Menu {parmigiano: Array(5),...}, NodeList(7) [p#items,...], <div id="total-popup">...</div> 
+Expect: eventLogger(
+  MouseEvent {isTrusted: true,...}, 
+  Menu {parmigiano: Array(5),...}, 
+  NodeList(7) [p#items,...], 
+  <div id="total-popup">...</div>
 ).toEqual(
   'This should use the id of the nodes event target name to decide which action to take.' 
   'This function is responsible for all interactions with the Menu object.' 
