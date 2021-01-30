@@ -4,7 +4,7 @@ const menuComponent = (obj) => {
   return `
     <div id="menuComponent">
       <div id="menu-name">
-      <p>${obj[0]} -${obj[1]}${obj[2]}</p>
+      <p>${obj[0]} ${obj[1]}${obj[2]}</p>
       <button id="${obj[6]}">Add ${obj[0]}</button>
       </div>
       <div id="menu-description">${obj[3]}</div>
@@ -51,6 +51,7 @@ const eventLogger = (event, thisArg) => {
     break;
     case('submit'):
       thisArg.setSizePrice();
+      alert(thisArg.displayCurrentPrice())
   }
 }
 document.addEventListener('DOMContentLoaded', () => {

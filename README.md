@@ -3,17 +3,13 @@
 #### *This is a web app for a pizza parlor*
 
 <!-- Check list
-- Description
 - Specs
 - Link in gh-pages
-- Project repo
-- git clone repo link
-- date
  -->
 * * *
 
 ## Description  
-This is a web app made to add items (pizza toppings and crust) to a cart and return the total cost. This web app is made using JavaScrip prototypes.
+This is a web app made to add items (pizza toppings and crust) to a cart and return the total cost. This web app is made using JavaScript prototypes to create methods to change information in objects.
 
 * * *
 ## Specs
@@ -60,6 +56,11 @@ Expect: menu.setSizePrice('medium').toEqual(Menu {totalCost: 2})
 Test: 'It will set the size for a large pizza to the total cost'
 Expect: menu.setSizePrice('large').toEqual(Menu {totalCost: 5})
 
+Describe: Menu.prototype.displayCurrentPrice()
+Test: 'It will get the current price and add it to the selected size'
+Expect: menu.displayCurrentPrice().toEqual(4)
+
+
 Describe: threeMax()
 Test: 'It will take the current object values and object to change total cost up to three'
 Expect: threeMax(this.onion, this).toEqual(Menu{totalCost: 1, onion: {[1, {total: 1}]}) 
@@ -80,9 +81,9 @@ Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion
 
 ## Installation : 
 ### Want to see this webpage now?
-###### See this web page in action on [Github Pages]({repo})
+###### See this web page in action on [Github Pages]( )
 
-* Go to ( {project repo} ).
+* Go to ( https://github.com/dcouch440/pizza-parlor.git ).
 
 *  Navigate to the code button on the github website.\
 ![Code button](/img/README/code.PNG)
@@ -99,7 +100,7 @@ Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion
 
 - Once you have chosen your desired directory use the command.
 ```bash 
-git clone {git repo}
+git clone https://github.com/dcouch440/pizza-parlor.git
 ```
 
 <div 
@@ -131,7 +132,6 @@ git clone {git repo}
   If you have any problems make sure your HTTPS code is correct! The example above might not be the most recent HTTPS code!
 </div>
 
-
 * Then after the process is completed use the command.
 
 ``` bash
@@ -155,7 +155,7 @@ code .
 
 
 ## Addition comments:
-* Created on x/xx/21
+* Created on 1/29/21
 
 
 * * *
