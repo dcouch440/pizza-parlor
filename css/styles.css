@@ -168,6 +168,7 @@ h1 {
     -1px -1px 1px rgb(255, 255, 255);
 }
 #total-popup {
+  z-index: 9999;
   position: absolute;
   display: none;
   justify-content: center;
