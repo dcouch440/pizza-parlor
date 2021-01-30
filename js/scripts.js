@@ -21,9 +21,7 @@ const displayTotal = (obj) => {
     <div id="total">Total Cost With Us Today: $${obj.displayCurrentPrice()}</div>
   `
 };
-
 const activateButton = (buttons, activeButton) => {
-  console.log(buttons, activeButton)
   buttons.forEach(button =>  button.style.boxShadow = 'none');
   activeButton.style.boxShadow = '0px 0px 2px 3px black';
 };
