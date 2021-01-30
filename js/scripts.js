@@ -2,7 +2,7 @@ import {Menu} from './classes/Menu.js'
 
 const menuComponent = (obj, i) => {
   return `
-    <div class="menu-component">
+    <div key={${i}} class="menu-component">
       <div class="menu-name">
         <p class="title">${obj[0]} ${obj[1]}${obj[2]}</p>
         <div class="menu-description">${obj[3]}</div>

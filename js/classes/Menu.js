@@ -48,7 +48,7 @@ Menu.prototype.setSize = function(size) {
   this.size = size
 };
 Menu.prototype.displayCurrentPrice = function() {
-  let cost = 0
+  let cost = 0;
   switch(this.size) {
     case ('small'):
       cost = this.totalCost + this.small;
