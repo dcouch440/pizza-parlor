@@ -17,7 +17,7 @@ const displayTotal = (obj) => {
     <div id="total">Total Cost With Us Today: $${obj.displayCurrentPrice()}</div>
   `
 }
-const eventLogger = (event, thisArg, nodeList) => {
+const eventLogger = (event, thisArg, nodeList, totalModal) => {
   const eventTarget = event.target.id
   switch (eventTarget) {
     case ('parmigiano-button'):
@@ -52,12 +52,13 @@ const eventLogger = (event, thisArg, nodeList) => {
     break;
     case('submit'):
       thisArg.setSizePrice();
-      alert(thisArg.displayCurrentPrice())
+      totalModal.style.display = 'flex';
   }
 }
 document.addEventListener('DOMContentLoaded', () => {
   const menuSelector = document.getElementById('menu-selector-root');
-  const totalCost = document.getElementById('total-root');
+  const totalCost = document.querySelectorAll('.total-root');
+  const totalModal = document.getElementById('total-popup')
   let menu = new Menu();
   const myMenuItems = [
     menu.parmigiano, 
@@ -68,16 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.tomato,
     menu.mushroom
   ];
-  totalCost.innerHTML = displayTotal(menu);
+  totalCost.forEach(node => {node.innerHTML = displayTotal(menu)});
   const menuMapper = myMenuItems.map(
     (item, index) => {
       return menuComponent(item, index)
   }).join('');
   menuSelector.innerHTML = menuMapper
-  const myTotals = document.querySelectorAll('#items');
+  const toppingTotals = document.querySelectorAll('#items');
   document.getElementById('pizza-shop').addEventListener('click', event => {
-    eventLogger(event, menu, myTotals);
-    event.stopPropagation()
-    totalCost.innerHTML = displayTotal(menu);
+    eventLogger(event, menu, toppingTotals, totalModal);
+    totalCost.forEach(node => {node.innerHTML = displayTotal(menu)});
   });
 });
