@@ -61,7 +61,7 @@ Test: 'It will set all button outlines to none and then apply the active button 
 Expect: activateButton(
   (3) [button#small, button#medium, button#large], 
   <button id=​"small" style=​"box-shadow:​ black 0px 0px 2px 3px;​">​Small 2$​</button>​
-).toEqual('The none active buttons should remove their outlines and the active button should receive an outline')
+).toEqual('The non active buttons should remove their outlines and the active button should receive an outline')
 
 Describe: threeMax()
 Test: 'It will take the current object values and object to change total cost up to three'
