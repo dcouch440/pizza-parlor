@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   totalCost.innerHTML = displayTotal(menu);
   const menuMapper = myMenuItems.map(item => {
     return menuComponent(item)
-  }).join('')
+  }).join('');
   menuSelector.innerHTML = menuMapper
   document.getElementById('pizza-shop').addEventListener('click', event => {
     eventLogger(event, menu);
