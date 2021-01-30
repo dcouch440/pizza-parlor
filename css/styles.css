@@ -92,6 +92,9 @@ h1 {
   text-shadow: 0px 0px 1px black;
   padding: 5px 15px;
 }
+#pizza-shop #medium {
+  box-shadow: 0px 0px 2px 3px black;
+}
 #pizza-shop button:hover {
   cursor: pointer;
   background-color: #000000;

@@ -21,7 +21,13 @@ const displayTotal = (obj) => {
     <div id="total">Total Cost With Us Today: $${obj.displayCurrentPrice()}</div>
   `
 };
-const eventLogger = (event, thisArg, nodeList, totalModal) => {
+
+const activateButton = (buttons, activeButton) => {
+  console.log(buttons, activeButton)
+  buttons.forEach(button =>  button.style.boxShadow = 'none');
+  activeButton.style.boxShadow = '0px 0px 2px 3px black';
+};
+const eventLogger = (event, thisArg, nodeList, totalModal, buttons) => {
   const eventTarget = event.target.id;
   switch (eventTarget) {
     case ('parmigiano-button'):
@@ -47,13 +53,16 @@ const eventLogger = (event, thisArg, nodeList, totalModal) => {
       break;
     case ('small'):
       thisArg.setSize('small');
+      activateButton(buttons, event.target)
       break;
     case ('medium'):
       thisArg.setSize('medium');
-    break;
+      activateButton(buttons, event.target)
+      break;
     case ('large'):
       thisArg.setSize('large');
-    break;
+      activateButton(buttons, event.target)
+      break;
     case('submit'):
       thisArg.setSizePrice();
       totalModal.style.display = 'flex';
@@ -63,6 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuSelector = document.getElementById('menu-selector-root');
   const totalCost = document.querySelectorAll('.total-root');
   const totalModal = document.getElementById('total-popup');
+  const smallButton = document.getElementById('small');
+  const mediumButton = document.getElementById('medium');
+  const largeButton = document.getElementById('large');
+  const sizeButtons = [smallButton, mediumButton, largeButton];
+
   let menu = new Menu();
   const myMenuItems = [
     menu.parmigiano, 
@@ -81,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   menuSelector.innerHTML = menuMapper
   const toppingTotals = document.querySelectorAll('.items');
   document.getElementById('pizza-shop').addEventListener('click', event => {
-    eventLogger(event, menu, toppingTotals, totalModal);
+    eventLogger(event, menu, toppingTotals, totalModal, sizeButtons);
     totalCost.forEach(node => node.innerHTML = displayTotal(menu));
   });
 });
