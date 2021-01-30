@@ -12,7 +12,7 @@ This is a web app made to add items (pizza toppings) to a cart and return the to
 ```js
 Describe: Menu()
 Test: 'It will create an object to hold all the pizza toppings and other options'
-Expect: new Menu().toEqual(Menu {parmigiano: Array(5), paggiaro: Array(5), brie: Array(5), onion: Array(5), olive: Array(5), …})
+Expect: new Menu().toEqual(Menu {parmigiano: Array(7), paggiaro: Array(7), brie: Array(7), onion: Array(7), olive: Array(7), …})
 
 Describe: Menu.prototype.setParmigianoPrice()
 Test: 'It will add parmigiano to the total price until 3 total items are added. Cost 5'
