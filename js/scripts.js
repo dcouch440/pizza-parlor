@@ -1,4 +1,4 @@
-import {Menu} from './classes/Menu.js'
+import {Menu} from './classes/Menu.js';
 
 const menuComponent = (obj, i) => {
   return `
@@ -15,14 +15,14 @@ const menuComponent = (obj, i) => {
       </div>
     </div>
   `
-}
+};
 const displayTotal = (obj) => {
   return`
     <div id="total">Total Cost With Us Today: $${obj.displayCurrentPrice()}</div>
   `
-}
+};
 const eventLogger = (event, thisArg, nodeList, totalModal) => {
-  const eventTarget = event.target.id
+  const eventTarget = event.target.id;
   switch (eventTarget) {
     case ('parmigiano-button'):
       thisArg.setParmigianoPrice(nodeList[0]);
@@ -57,12 +57,12 @@ const eventLogger = (event, thisArg, nodeList, totalModal) => {
     case('submit'):
       thisArg.setSizePrice();
       totalModal.style.display = 'flex';
-  }
-}
+  };
+};
 document.addEventListener('DOMContentLoaded', () => {
   const menuSelector = document.getElementById('menu-selector-root');
   const totalCost = document.querySelectorAll('.total-root');
-  const totalModal = document.getElementById('total-popup')
+  const totalModal = document.getElementById('total-popup');
   let menu = new Menu();
   const myMenuItems = [
     menu.parmigiano, 
