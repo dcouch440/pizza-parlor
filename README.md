@@ -47,7 +47,7 @@ Test: 'It will set the size for a small pizza to the total cost'
 Expect: menu.setSizePrice('small').toEqual(Menu {totalCost: 2})
 
 Test: 'It will set the size for a medium pizza to the total cost'
-Expect: menu.setSizePrice('medium').toEqual(Menu {totalCost: 2})
+Expect: menu.setSizePrice('medium').toEqual(Menu {totalCost: 4})
 
 Test: 'It will set the size for a large pizza to the total cost'
 Expect: menu.setSizePrice('large').toEqual(Menu {totalCost: 5})
