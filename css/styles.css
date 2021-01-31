@@ -39,7 +39,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: var(--black-border-2px);
   font-size: 16px;
   padding: 25px;
   border: var(--black-border-3px);

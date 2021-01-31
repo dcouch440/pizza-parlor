@@ -56,19 +56,19 @@ Describe: Menu.prototype.displayCurrentPrice()
 Test: 'It will get the current price and add it to the selected size'
 Expect: menu.displayCurrentPrice().toEqual(4)
 
-Describe: activateButton() 
+Describe: activateButton()
 Test: 'It will set all button outlines to none and then apply the active button an outline'
 Expect: activateButton(
-  (3) [button#small, button#medium, button#large], 
+  (3) [button#small, button#medium, button#large],
   <button id=​"small" style=​"box-shadow:​ black 0px 0px 2px 3px;​">​Small 2$​</button>​
 ).toEqual('The non active buttons should remove their outlines and the active button should receive an outline')
 
 Describe: threeMax()
 Test: 'It will take the current object values and object to change total cost up to three'
-Expect: threeMax(this.onion, this).toEqual(Menu{totalCost: 1, onion: {[1, {total: 1}]}) 
+Expect: threeMax(this.onion, this).toEqual(Menu{totalCost: 1, onion: {[1, {total: 1}]})
 
 Test: 'It will be used inside methods to increase values but will not exceed 3'
-Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion: {[4, {total: 3}]}) 
+Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion: {[4, {total: 3}]})
 
 Describe: updateNodes()
 Test: 'It will update html nodes to the chosen object total'
