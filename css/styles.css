@@ -32,7 +32,10 @@ h1 {
   color: #ffffff;
   background-color: rgb(0, 0, 0);
   border: var(--black-border-3px);
-  box-shadow: inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 0px 4px 9px 1px #0000007a, 0px 1px 2px 2px black;
+  box-shadow: 
+    inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 
+    0px 4px 9px 1px #0000007a, 
+    0px 1px 2px 2px black;
   border-radius: 5% / 20%;
   padding: 5px;
   text-shadow: var(--cartoon-drop)
@@ -45,14 +48,20 @@ h1 {
   padding: 25px 25px 26px 25px;
   border: var(--black-border-3px);
   background-color: #00000041;
-  box-shadow: inset 0px 1px 5px 2px rgba(116, 116, 116, 0.753), 0px 4px 9px 1px #ffffff7a, 0px 1px 2px 2px black;
+  box-shadow: 
+    inset 0px 1px 5px 2px rgba(116, 116, 116, 0.753), 
+    0px 4px 9px 1px #ffffff7a, 
+    0px 1px 2px 2px black;
   border-radius: 5% / 1%;
   text-shadow: 1px 1px 2px rgb(99, 99, 99);
 }
 #pizza-options-menu {
   background-color: antiquewhite;
   border: var(--black-border-2px);
-  box-shadow:0px 1px 2px 2px black, inset -60px 19px 130px 2px #c3c3c3a2, inset -2px -16px 130px 2px #b5b5b524;
+  box-shadow: 
+    0px 1px 2px 2px black, 
+    inset -60px 19px 130px 2px #c3c3c3a2, 
+    inset -2px -16px 130px 2px #b5b5b524;
   padding: 10px;
   padding-left: 1%;
   width: 48%;
@@ -87,13 +96,20 @@ h1 {
     0px 6px 3px black;
   border-radius: 10px 10px 0px 0px;
   padding: 5px;
-  text-shadow: -1px -2px 2px black, 1px 1px 1px white, -1px 2px 1px black;
+  text-shadow: 
+    -1px -2px 2px black,
+    1px 1px 1px white, 
+    -1px 2px 1px black;
 }
 #pizza-shop button {
   background-color: #Fe7A15;
   border-radius: 10% / 50%;
   border: 1px solid black;
-  box-shadow: 1px 0px 2px 0px black, -1px 0px 2px 0px black, inset -1px 0px 4px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 
+    1px 0px 2px 0px black, 
+    -1px 0px 2px 0px black, 
+    inset -1px 0px 4px 0px rgba(0, 0, 0, 0.5), 
+    inset 1px 0px 4px 0px rgba(0, 0, 0, 0.5);
   text-shadow: 0px 0px 1px black;
   padding: 5px 15px;
   font-family: var(--cartoon-font);
@@ -124,7 +140,9 @@ h1 {
 }
 #description-text {
   color: #fe7a15;
-  text-shadow: 0px 0px 5px black, 1px 1px 2px rgba(0, 0, 0, 0.74);
+  text-shadow: 
+    0px 0px 5px black, 
+    1px 1px 2px rgba(0, 0, 0, 0.74);
 }
 #description-img {
   background-color: #673ab7;
@@ -134,13 +152,12 @@ h1 {
   padding: 1%;
   border: 5px solid black;
   box-shadow: 
-  inset 0px 0px 50px 2px rgb(0, 0, 0), 
-  0px 4px 9px 1px #000000, 
-  0px 1px 2px 0px black,
-  0px 6px 12px black;
+    inset 0px 0px 50px 2px rgb(0, 0, 0), 
+    0px 4px 9px 1px #000000, 
+    0px 1px 2px 0px black,
+    0px 6px 12px black;
   filter: grayscale(90%)
 }
-
 #description-title {
   text-align: center;
 }
@@ -156,10 +173,10 @@ h1 {
   padding: 1%;
   border: 1px solid black;
   box-shadow: 
-  inset 0px 0px 50px 2px rgba(0, 0, 0, 0.397), 
-  0px 4px 9px 1px #000000, 
-  0px 1px 2px 0px rgba(0, 0, 0, 0.562),
-  0px 6px 3px black;
+    inset 0px 0px 50px 2px rgba(0, 0, 0, 0.397), 
+    0px 4px 9px 1px #000000, 
+    0px 1px 2px 0px rgba(0, 0, 0, 0.562),
+    0px 6px 3px black;
 }
 #img-container img {
   width: 170px;
@@ -200,16 +217,23 @@ h1 {
   color: #ffffff;
   background-color: rgb(0, 0, 0);
   border: var(--black-border-3px);
-  box-shadow: inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 0px 4px 9px 1px #0000007a, 0px 1px 2px 2px black,  inset 1px 1px 10px 1px white;
+  box-shadow: 
+    inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 
+    0px 4px 9px 1px #0000007a, 
+    0px 1px 2px 2px black,  
+    inset 1px 1px 10px 1px white;
   border-radius: 5% / 20%;
   padding: 5px;
-  text-shadow: -1px -2px 2px black, 1px 1px 1px white, -1px 2px 1px black, 1px 1px 3px white;
+  text-shadow: 
+    -1px -2px 2px black, 
+    1px 1px 1px white, 
+    -1px 2px 1px black, 
+    1px 1px 3px white;
 }
 @media only screen and (max-width: 1000px){
   #pizza-shop {
     flex-direction: column-reverse;
     height: 100%;
-
   }
   #pizza-options-menu { 
     min-width: 100%;
