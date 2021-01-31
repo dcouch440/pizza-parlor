@@ -1,11 +1,11 @@
 export function Menu() {
   this.parmigiano = ['Parmigiano', '$', 5, 'Sharper than your grandads straight razor!', 0, {total: 0}, 'parmigiano-button'];
   this.paggiaro = ['Paggiaro', '$', 3, 'A robust classic.', 0, {total: 0}, 'paggiaro-button'];
-  this.brie = ['Brie', '$', 2, 'A soft farmhouse Cheese. Carful its addicting.', 0, {total: 0}, 'brie-button'];
+  this.brie = ['Brie', '$', 2, 'A soft farmhouse Cheese. Carful it\'s addicting.', 0, {total: 0}, 'brie-button'];
   this.onion = ['Onion', '$', 1, 'A gift from earth.', 0, {total: 0}, 'onion-button'];
   this.olive = ['Olive', '$', 1, 'Pungent.. nuff said.', 0, {total: 0}, 'olive-button'];
   this.tomato = ['Tomato', '$', 1, 'Slightly sweet, never sour.', 0, {total: 0}, 'tomato-button'];
-  this.mushroom = ['Mushroom', '$', 2, 'These mushrooms are a journey!', 0, {total: 0}, 'mushroom-button'];
+  this.mushroom = ['Mushroom', '$', 2, 'These mushrooms are the best around!', 0, {total: 0}, 'mushroom-button'];
   this.size = 'medium';
   this.small = 2;
   this.medium = 4;
@@ -13,7 +13,7 @@ export function Menu() {
   this.totalCost = 0;
 };
 const updateNodes = (currentNode, objKey) => {
-  currentNode.innerHTML = objKey[5].total
+  currentNode.innerHTML = objKey[5].total;
 };
 const threeMax = (objKey, thisArg, currentNode) => {
   objKey[4] += 1;
@@ -45,7 +45,7 @@ Menu.prototype.setMushroomPrice = function(currentNode) {
   threeMax(this.mushroom, this, currentNode);
 };
 Menu.prototype.setSize = function(size) {
-  this.size = size
+  this.size = size;
 };
 Menu.prototype.displayCurrentPrice = function() {
   let cost = 0;
@@ -59,7 +59,7 @@ Menu.prototype.displayCurrentPrice = function() {
     case ('large'):
       cost = this.totalCost + this.large;
       break;    
-  }
+  };
   return cost;
 };
 Menu.prototype.setSizePrice = function(size) { 

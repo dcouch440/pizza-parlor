@@ -65,7 +65,7 @@ Expect: activateButton(
 
 Describe: threeMax()
 Test: 'It will take the current object values and object to change total cost up to three'
-Expect: threeMax(this.onion, this).toEqual(Menu{totalCost: 1, onion: {[1, {total: 1}]})
+Expect: threeMax(this.onion, this).toEqual(Menu {totalCost: 1, onion: {[1, {total: 1}]})
 
 Test: 'It will be used inside methods to increase values but will not exceed 3'
 Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion: {[4, {total: 3}]})
