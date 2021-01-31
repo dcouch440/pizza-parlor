@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sizeButtons = [smallButton, mediumButton, largeButton];
 
   let menu = new Menu();
-  console.log(menu)
   const myMenuItems = [
     menu.parmigiano, 
     menu.paggiaro,
