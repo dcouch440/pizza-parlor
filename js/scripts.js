@@ -22,7 +22,7 @@ const displayTotal = (obj) => {
   `
 };
 const activateButton = (buttons, activeButton) => {
-  buttons.forEach(button =>  button.style.boxShadow = 'none');
+  buttons.forEach(button =>  button.style.boxShadow = '1px 0px 2px 0px black, -1px 0px 2px 0px black');
   activeButton.style.boxShadow = '0px 0px 2px 3px black';
 };
 const eventLogger = (event, thisArg, nodeList, totalModal, buttons) => {
