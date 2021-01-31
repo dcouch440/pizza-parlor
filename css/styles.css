@@ -56,16 +56,16 @@ h1 {
   text-shadow: 1px 1px 2px rgb(99, 99, 99);
 }
 #pizza-options-menu {
+  flex: 1 5 40%;
   background-color: antiquewhite;
   border: var(--black-border-2px);
   box-shadow: 
     0px 1px 2px 2px black, 
     inset -60px 19px 130px 2px #c3c3c3a2, 
     inset -2px -16px 130px 2px #b5b5b524;
-  padding: 10px;
-  padding-left: 1%;
-  width: 48%;
-  border-radius: 5px;
+  padding: 10px 10px 10px 1%;
+  margin: 1%;
+  border-radius: 5px / 30px;
 }
 .menu-description {
   width: 70%;
@@ -131,10 +131,11 @@ h1 {
 }
 #shop-description {
   display: flex;
+  flex: 1 1 40%;
+  margin: 1%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 48%;
   height: 100%;
   text-align: center;
 }
