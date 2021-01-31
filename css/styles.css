@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+:root {
+  --cartoon-drop: -1px -2px 2px black, 1px 1px 1px white, -1px 2px 1px black;
+  --black-border-2px: 2px solid black;
+  --black-border-3px: 3px solid black;
+}
 * {
   box-sizing: border-box;
 }
@@ -10,6 +15,7 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
+  font-family: 'Potta One', cursive;
 }
 #shop-container {
   position: relative;
@@ -21,32 +27,30 @@ html, body {
   background-color:#0080a0;
 }
 h1 {
-  font-family: 'Potta One', cursive;
   color: #ffffff;
   background-color: rgb(0, 0, 0);
-  border: 3px solid #000000;
+  border: var(--black-border-3px);
   box-shadow: inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 0px 4px 9px 1px #0000007a, 0px 1px 2px 2px black;
   border-radius: 5% / 20%;
   padding: 5px;
-  text-shadow: -1px -2px 2px black, 1px 1px 1px white, -1px 2px 1px black;
+  text-shadow: var(--cartoon-drop)
 }
 #pizza-shop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid black;
+  border: var(--black-border-2px);
   font-size: 16px;
   padding: 25px;
-  border: 3px solid #000000;
+  border: var(--black-border-3px);
   background-color: #00000041;
   box-shadow: inset 0px 1px 5px 2px rgba(116, 116, 116, 0.753), 0px 4px 9px 1px #ffffff7a, 0px 1px 2px 2px black;
   border-radius: 5% / 1%;
-  font-family: 'Potta One', cursive;
   text-shadow: 1px 1px 2px rgb(99, 99, 99);
 }
 #pizza-options-menu {
   background-color: antiquewhite;
-  border: 2px solid black;
+  border: var(--black-border-2px);
   box-shadow:0px 1px 2px 2px black, inset -60px 19px 130px 2px #c3c3c3a2, inset -2px -16px 130px 2px #b5b5b524;
   padding: 10px;
   padding-left: 1%;
@@ -74,7 +78,7 @@ h1 {
   width: 30%;
   color: #ffffff;
   background-color: rgb(0, 0, 0);
-  border: 3px solid #000000;
+  border: var(--black-border-3px);
   box-shadow: 
     inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 
     0px 4px 9px 1px #0000007a, 
@@ -89,7 +93,6 @@ h1 {
   border-radius: 10% / 50%;
   border: 1px solid black;
   box-shadow: 1px 0px 2px 0px black;
-  font-family: 'Potta One', cursive;
   text-shadow: 0px 0px 1px black;
   padding: 5px 15px;
 }
@@ -160,7 +163,7 @@ h1 {
   width: 170px;
   height: 111px;
   object-fit: cover;
-  border: 2px solid black;
+  border: var(--black-border-2px);
   box-shadow: 0 0 2px 2px black;
   border-radius: 2px;
 }
@@ -186,7 +189,6 @@ h1 {
 #total-popup-total {
   position: absolute;
   display: flex;
-  font-family: 'Potta One', cursive;
   width: 40%;
   height: 40%;
   text-align: center;
@@ -195,7 +197,7 @@ h1 {
   align-items: center;
   color: #ffffff;
   background-color: rgb(0, 0, 0);
-  border: 3px solid #000000;
+  border: var(--black-border-3px);
   box-shadow: inset 0px 0px 1px 2px rgb(250 250 250 / 75%), 0px 4px 9px 1px #0000007a, 0px 1px 2px 2px black,  inset 1px 1px 10px 1px white;
   border-radius: 5% / 20%;
   padding: 5px;
