@@ -49,8 +49,7 @@ h1 {
   border: var(--black-border-3px);
   background-color: #00000041;
   box-shadow: 
-    inset 0px 1px 5px 2px 
-    rgb(116 116 116 / 75%), 
+    inset 0px 1px 5px 2px rgb(116 116 116 / 75%), 
     0px 4px 9px 1px #ffffff7a, 
     0px 1px 2px 2px black, 
     0px -1px 9px 1px #ffffff54, 
