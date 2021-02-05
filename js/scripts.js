@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let menu = new Menu(parmigianoSelect, paggiaroSelect, onionSelect, sizeSelect);
     menu.addPrice()
     modal.classList.add('show');
-    console.log(menu.getTotal())
+    console.log(menu)
     total.innerHTML = `Total Today $${menu.getTotal()}`
   });
 });
