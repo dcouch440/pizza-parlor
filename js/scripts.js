@@ -20,7 +20,6 @@ Menu.prototype.getTotal = function() {
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.querySelector('.total-popup');
   const total = document.getElementById('total-root');
-  console.log(new Menu('1', '1', '1', 'Large'))
   document.getElementById('submit').addEventListener('click', () => {
     const parmigianoSelect = parseInt(document.getElementById('parmigiano').value);
     const paggiaroSelect = parseInt(document.getElementById('paggiaro').value);
@@ -30,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let menu = new Menu(parmigianoSelect, paggiaroSelect, onionSelect, sizeSelect);
     menu.addPrice()
     modal.classList.add('show');
+    console.log(menu.getTotal())
     total.innerHTML = `Total Today $${menu.getTotal()}`
   });
 });
