@@ -19,7 +19,7 @@ const menuComponent = (obj, i) => {
 const displayTotal = (obj) => {
   return`
     <div id="total">Total Cost With Us Today: $${obj.displayCurrentPrice()}</div>
-  `
+ `
 };
 const activateButton = (buttons, activeButton) => {
   buttons.forEach(
@@ -53,15 +53,15 @@ const eventLogger = (event, thisArg, nodeList, totalModal, buttons) => {
       break;
     case ('small'):
       thisArg.setSize('small');
-      activateButton(buttons, event.target)
+      activateButton(buttons, event.target);
       break;
     case ('medium'):
       thisArg.setSize('medium');
-      activateButton(buttons, event.target)
+      activateButton(buttons, event.target);
       break;
     case ('large'):
       thisArg.setSize('large');
-      activateButton(buttons, event.target)
+      activateButton(buttons, event.target);
       break;
     case('submit'):
       thisArg.setSizePrice();
@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sizeButtons = [smallButton, mediumButton, largeButton];
 
   let menu = new Menu();
+
   const myMenuItems = [
     menu.parmigiano, 
     menu.paggiaro,
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.tomato,
     menu.mushroom
   ];
+
   totalCost.forEach(node => node.innerHTML = displayTotal(menu));
   const menuMapper = myMenuItems.map(
     (item, index) => {
