@@ -1,44 +1,42 @@
-import {Menu} from './classes/Menu.js';
-
-
-
-const eventLogger = (event, thisArg) => {
-  const {id} = event.target
-  switch (id) {
-    case ('parmigiano-button'):
-      thisArg.setParmigianoPrice();
-      break;
-    case ('paggiaro-button'):
-      thisArg.setPaggiaroPrice();
-      break;
-    case ('brie-button'):
-      thisArg.setBriePrice();
-      break;
-    case ('onion-button'):
-      thisArg.setOnionPrice();
-      break;
-    case ('olive-button'):
-      thisArg.setOlivePrice();
-      break;
-    case ('tomato-button'):
-      thisArg.setTomatoPrice();
-      break;
-    case ('mushroom-button'):
-      thisArg.setMushroomPrice();
-      break;
-    case('submit'):
-      thisArg.setSizePrice();
-  };
-};
+export function Menu(parmigiano, paggiaro, onion, size) {
+  this.parmigiano = parmigiano;
+  this.paggiaro = paggiaro;
+  this.onion = onion;
+  this.size = size;
+}
+Menu.prototype.setParmigianoPrice = function(parmigiano) {
+  this.parmigiano = parmigiano;
+}
+Menu.prototype.setBriePrice = function(paggiaro) {
+  this.paggiaro = paggiaro;
+}
+Menu.prototype.setOnionPrice = function(onion) {
+  this.onion = onion;
+}
+Menu.prototype.setSize = function(size) {
+  this.size = size;
+}
+Menu.prototype.addPrice = function() {
+  const sizeCost =
+  {
+    'Small': () => 2,
+    'Medium': () => 3,
+    'Large': () => 6
+  }
+  let size = sizeCost[this.size]()
+  this.totalCost = this.parmigiano + this.paggiaro + this.onion + size;
+}
 document.addEventListener('DOMContentLoaded', () => {
-  const totalCost = document.querySelectorAll('.total-root');
-  const totalModal = document.getElementById('total-popup');
-
-  let menu = new Menu();
-
-  const toppingTotals = document.querySelectorAll('.items');
-  document.getElementById('pizza-shop').addEventListener('click', event => {
-    eventLogger(event, menu, toppingTotals, totalModal);
-    totalCost.forEach(node => node.innerHTML = displayTotal(menu));
+  let menu
+  document.getElementById('submit').addEventListener('click', () => {
+    const parmigianoSelect = parseInt(document.getElementById('parmigiano').value);
+    const paggiaroSelect = parseInt(document.getElementById('paggiaro').value);
+    const onionSelect = parseInt(document.getElementById('onion').value);
+    const sizeSelect = document.getElementById('size').value;
+    menu = new Menu(parmigianoSelect, paggiaroSelect, onionSelect, sizeSelect)
+    menu.addPrice()
+    console.log(menu)
   });
+
 });
+
