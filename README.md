@@ -10,92 +10,20 @@ This is a web app made to add items (pizza toppings) to a cart and return the to
 * * *
 ## Specs
 ```js
+
 Describe: Menu()
 Test: 'It will create an object to hold all the pizza toppings and other options'
-Expect: new Menu().toEqual(Menu {parmigiano: Array(7), paggiaro: Array(7), brie: Array(7), onion: Array(7), olive: Array(7), …})
+Expect: new Menu('1', '1', '1', 'Large').toEqual(Menu {parmigiano: '1', paggiaro: '1', onion: '1', size: 'Large'})
 
-Describe: Menu.prototype.setParmigianoPrice()
-Test: 'It will add parmigiano to the total price until 3 total items are added. Cost 5'
-Expect: menu.setParmigianoPrice().toEqual(Menu {totalCost: 15})
+Describe: Menu.prototype.addPrice()
+Test: 'It will add the price of items in the cart'
+Expect: menu.getTotal().toEqual(Menu {parmigiano: '1', paggiaro: '1', onion: '1', size: 'Large', totalCost: 9})
 
-Describe: Menu.prototype.setPaggiaroPrice()
-Test: 'It will add paggiaro to the total price until 3 total items are added. Cost 3'
-Expect: menu.setPaggiaroPrice().toEqual(Menu {totalCost: 9})
-
-Describe: Menu.prototype.setBriePrice()
-Test: 'It will add brie to the total price until 3 total items are added. Cost 2'
-Expect: menu.setBriePrice().toEqual(Menu {totalCost: 6})
-
-Describe: Menu.prototype.setOnionPrice()
-Test: 'It will add onion to the total price until 3 total items are added. Cost 1'
-Expect: menu.setOnionPrice().toEqual(Menu {totalCost: 3})
-
-Describe: Menu.prototype.setOlivePrice()
-Test: 'It will add olive to the total price until 3 total items are added. Cost 1'
-Expect: menu.setOlivePrice().toEqual(Menu {totalCost: 3})
-
-Describe: Menu.prototype.setTomatoPrice()
-Test: 'It will add tomato to the total price until 3 total items are added. Cost 1'
-Expect: menu.setTomatoPrice().toEqual(Menu {totalCost: 3})
-
-Describe: Menu.prototype.setMushroomPrice()
-Test: 'It will add mushroom to the total price until 3 total items are added. Cost 1'
-Expect: menu.setMushroomPrice().toEqual(Menu {totalCost: 3})
-
-Describe: Menu.prototype.setSizePrice()
-Test: 'It will set the size for a small pizza to the total cost'
-Expect: menu.setSizePrice('small').toEqual(Menu {totalCost: 2})
-
-Test: 'It will set the size for a medium pizza to the total cost'
-Expect: menu.setSizePrice('medium').toEqual(Menu {totalCost: 4})
-
-Test: 'It will set the size for a large pizza to the total cost'
-Expect: menu.setSizePrice('large').toEqual(Menu {totalCost: 5})
-
-Describe: Menu.prototype.displayCurrentPrice()
-Test: 'It will get the current price and add it to the selected size'
-Expect: menu.displayCurrentPrice().toEqual(4)
-
-Describe: activateButton()
-Test: 'It will set all button outlines to none and then apply the active button an outline'
-Expect: activateButton(
-  (3) [button#small, button#medium, button#large],
-  <button id=​"small" style=​"box-shadow:​ black 0px 0px 2px 3px;​">​Small 2$​</button>​
-).toEqual('The non active buttons should remove their outlines and the active button should receive an outline')
-
-Describe: threeMax()
-Test: 'It will take the current object values and object to change total cost up to three'
-Expect: threeMax(this.onion, this).toEqual(Menu {totalCost: 1, onion: {[1, {total: 1}]})
-
-Test: 'It will be used inside methods to increase values but will not exceed 3'
-Expect: (menu.setOnionPrice() 'Called 4 times').toEqual(Menu{totalCost: 3, onion: {[4, {total: 3}]})
-
-Describe: updateNodes()
-Test: 'It will update html nodes to the chosen object total'
-Expect: updateNodes(
-  <p key="{0}" id="items">0</p>, 
-  (7) ["Parmigiano", "$", 5, "Sharper than your grandads straight razor!", 0, {…}, "parmigiano-button"]
-).toEqual(
-  <p key="{0}" id="items">1</p>, 
-  (7) ["Parmigiano", "$", 5, "Sharper than your grandads straight razor!", 1, {…}, "parmigiano-button"]
-)
-
-Describe: eventLogger()
-Test: 'It will take in four arguments, the current event being fired, object to be called on, nodes to be passed through, and a modal node to show for user total'
-Expect: eventLogger(
-  MouseEvent {isTrusted: true,...}, 
-  Menu {parmigiano: Array(5),...}, 
-  NodeList(7) [p#items,...], 
-  <div id="total-popup">...</div>
-).toEqual(
-  'This should use the id of the nodes event target name to decide which action to take.' 
-  'This function is responsible for all interactions with the Menu object.' 
-  'Please see corresponding methods for each case to see what actions are being taken.' 
-  'The node list is in corresponding order to know which total to update.'
-) 
+Describe Menu.prototype.getTotal()
+Test: 'It will get the totalCost value to display'
+Expect: menu.getTotal().toEqual(9)
 
 ```
-
 * * *
 ## Technologies used
 * HTML
@@ -103,7 +31,6 @@ Expect: eventLogger(
 * Git and Github
 * JavaScript
 * * *
-
 
 ## Installation : 
 ### Want to see this webpage now?
