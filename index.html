@@ -17,13 +17,84 @@
     <h1>Build Your Own Pizza 🍕</h1>
     <div id="pizza-shop">
       <div id="pizza-options-menu">
-        <div id="menu-selector-root"></div>
-        <div id="button-container">
-          <button id="small">Small 2$</button>
-          <button id="medium">Medium 4$</button>
-          <button id="large">Large 5$</button>
-          <div class="total-root"></div>
+        <div id="menu-selector-root">
+          <!-- Paggiaro 453-->
+          <div class="menu-component">
+            <div class="menu-name">
+              <p class="title">Parmigiano</p>
+              <div class="menu-description">Sharper than your grandads straight razor!</div>
+              <div class="button-container">
+                <button id="'topping-button'">Add Parmigiano
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Brie -->
+          <div class="menu-component">
+            <div class="menu-name">
+              <p class="title">Paggiaro</p>
+              <div class="menu-description">A robust classic.</div>
+              <div class="button-container">
+                <button id="topping-button">Add Paggiaro
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Onion -->
+          <div class="menu-component">
+            <div class="menu-name">
+              <p class="title">Brie</p>
+              <div class="menu-description">A soft farmhouse Cheese. Carful it's addicting.</div>
+              <div class="button-container">
+                <button id="topping-button">Add Paggiaro
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Olive -->
+          <div class="menu-component">
+            <div class="menu-name">
+              <p class="title">Onion</p>
+              <div class="menu-description">A gift from earth.</div>
+              <div class="button-container">
+                <button id="topping-button">Add Onion
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Tomato -->
+          <div class="menu-component">
+            <div class="menu-name">
+              <p class="title">Olive</p>
+              <div class="menu-description">Pungent.. nuff said.</div>
+              <div class="button-container">
+                <button id="topping-button">Add Olive
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Mushroom -->
+          <div class="menu-component">
+            <div class="menu-name">
+              <p class="title">Mushroom</p>
+              <div class="menu-description">These mushrooms are the best around!</div>
+              <div class="button-container">
+                <button id="topping-button">Add Mushroom
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+        <form>
+          <label for="size">Chose a size:</label>
+          <select name="size">
+            <optgroup label="Pick A Size">
+              <option>Large</option>
+              <option>Medium</option>
+              <option>Small</option>
+            </optgroup>
+          </select>
+        </form>
         <button id="submit">Order</button>
       </div>
       <div id="shop-description">
