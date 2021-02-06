@@ -7,9 +7,9 @@ function Menu(parmigiano, paggiaro, onion, size) {
 Menu.prototype.addPrice = function() {
   const sizeCost =
   {
-    'Small': () => 2,
-    'Medium': () => 3,
-    'Large': () => 6
+    Small: () => 2,
+    Medium: () => 3,
+    Large: () => 6
   };
   let size = sizeCost[this.size]();
   this.totalCost = this.parmigiano + this.paggiaro + this.onion + size;
