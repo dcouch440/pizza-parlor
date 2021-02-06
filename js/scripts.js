@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const paggiaroSelect = parseInt(document.getElementById('paggiaro').value);
     const onionSelect = parseInt(document.getElementById('onion').value);
     const sizeSelect = document.getElementById('size').value;
-
     let menu = new Menu(parmigianoSelect, paggiaroSelect, onionSelect, sizeSelect);
     menu.addPrice()
     modal.classList.add('show');
