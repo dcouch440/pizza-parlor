@@ -10,7 +10,7 @@ Menu.prototype.addPrice = function() {
     'Small': () => 2,
     'Medium': () => 3,
     'Large': () => 6
-  }
+  };
   let size = sizeCost[this.size]();
   this.totalCost = this.parmigiano + this.paggiaro + this.onion + size;
 }
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let menu = new Menu(parmigianoSelect, paggiaroSelect, onionSelect, sizeSelect);
     menu.addPrice();
     modal.classList.add('show');
-    total.innerHTML = `Total Today $${menu.getTotal()}`
+    total.innerHTML = `Total Today $${menu.getTotal()}`;
   });
 });
 
