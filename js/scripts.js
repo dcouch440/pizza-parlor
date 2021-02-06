@@ -3,6 +3,7 @@ function Menu(parmigiano, paggiaro, onion, size) {
   this.paggiaro = paggiaro;
   this.onion = onion;
   this.size = size;
+  this.price = 0;
 }
 Menu.prototype.addPrice = function() {
   const sizeCost =
@@ -12,10 +13,10 @@ Menu.prototype.addPrice = function() {
     Large: () => 6
   };
   let size = sizeCost[this.size]();
-  this.totalCost = this.parmigiano + this.paggiaro + this.onion + size;
+  this.price = this.parmigiano + this.paggiaro + this.onion + size;
 }
 Menu.prototype.getTotal = function() {
-  return this.totalCost;
+  return this.price;
 }
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.querySelector('.total-popup');
