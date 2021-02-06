@@ -11,7 +11,7 @@ Menu.prototype.addPrice = function() {
     'Medium': () => 3,
     'Large': () => 6
   }
-  let size = sizeCost[this.size]()
+  let size = sizeCost[this.size]();
   this.totalCost = this.parmigiano + this.paggiaro + this.onion + size;
 }
 Menu.prototype.getTotal = function() {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const onionSelect = parseInt(document.getElementById('onion').value);
     const sizeSelect = document.getElementById('size').value;
     let menu = new Menu(parmigianoSelect, paggiaroSelect, onionSelect, sizeSelect);
-    menu.addPrice()
+    menu.addPrice();
     modal.classList.add('show');
     total.innerHTML = `Total Today $${menu.getTotal()}`
   });
