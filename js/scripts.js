@@ -28,40 +28,42 @@ const activateButton = (buttons, activeButton) => {
   activeButton.style.boxShadow = '0px 0px 2px 3px black';
 };
 const eventLogger = (event, thisArg, nodeList, totalModal, buttons) => {
-  const eventTarget = event.target.id;
-  switch (eventTarget) {
+  const [parmigiano, paggiaro, brie, onion, olive, tomato, mushroom] = nodeList;
+  const {target, target:{id}} = event
+  
+  switch (id) {
     case ('parmigiano-button'):
-      thisArg.setParmigianoPrice(nodeList[0]);
+      thisArg.setParmigianoPrice(parmigiano);
       break;
     case ('paggiaro-button'):
-      thisArg.setPaggiaroPrice(nodeList[1]);
+      thisArg.setPaggiaroPrice(paggiaro);
       break;
     case ('brie-button'):
-      thisArg.setBriePrice(nodeList[2]);
+      thisArg.setBriePrice(brie);
       break;
     case ('onion-button'):
-      thisArg.setOnionPrice(nodeList[3]);
+      thisArg.setOnionPrice(onion);
       break;
     case ('olive-button'):
-      thisArg.setOlivePrice(nodeList[4]);
+      thisArg.setOlivePrice(olive);
       break;
     case ('tomato-button'):
-      thisArg.setTomatoPrice(nodeList[5]);
+      thisArg.setTomatoPrice(tomato);
       break;
     case ('mushroom-button'):
-      thisArg.setMushroomPrice(nodeList[6]);
+      thisArg.setMushroomPrice(mushroom);
       break;
     case ('small'):
       thisArg.setSize('small');
-      activateButton(buttons, event.target);
+      activateButton(buttons, target);
       break;
     case ('medium'):
       thisArg.setSize('medium');
-      activateButton(buttons, event.target);
+      activateButton(buttons, target);
       break;
     case ('large'):
       thisArg.setSize('large');
-      activateButton(buttons, event.target);
+      activateButton(buttons, target);
       break;
     case('submit'):
       thisArg.setSizePrice();
